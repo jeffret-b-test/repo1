@@ -10,7 +10,8 @@ node {
     stage('maven') {
         withMaven(
             maven: 'maven3'
+            ) {
             sh "mvn clean verify"
-        )
+        }
     }
 }
